@@ -1,0 +1,19 @@
+.together-tools{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    gap: 1px; 
+    display: flex;
+}
+
+.text-tool{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.text-design{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
