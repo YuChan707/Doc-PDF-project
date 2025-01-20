@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.css'
-import { triggerPdfDownload } from './src/toPDF-app';
+//import { triggerPdfDownload } from './PDF/toPDF-app';
 export const HeaderForm = (): any => {
 
     const triggerPdfDownload = () => {
@@ -13,10 +13,11 @@ export const HeaderForm = (): any => {
                     <h1>FREE PDF/WORD</h1>
                 </div>
                 <div className='header-saving'>
-                    <button className='pdf-save' onClick={triggerPdfDownload}>Save as PDF</button>
+                    <button className='pdf-save' >Save as PDF</button>
                     <button className='word-save'>Save as Word</button>
                 </div>
             </div>
         </>
     )
 }
+//onClick={triggerPdfDownload}

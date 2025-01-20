@@ -1,8 +1,8 @@
 import React from 'react'
 import {createRoot} from 'react-dom/client'
-import{AppTools} from './components/tools/app-tools.tsx'
-import{AppHeader} from './components/header/app-header.tsx'
-import{AppWriting} from './components/word-base/app-writing.tsx'
+import {AppTools} from './components/tools/app-tools.tsx'
+import {AppHeader} from './components/header/app-header.tsx' 
+import {AppWriting} from './components/word-base/app-writing.tsx'; 
 
 const RootHeader = document.getElementById('header')
 const rootHeader = createRoot(RootHeader)

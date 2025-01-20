@@ -1,5 +1,5 @@
 // components/header/src/toPDF-app.tsx
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import { MyDocument } from './toPDF-form'; // Import your PDF component
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
@@ -25,5 +25,31 @@ export const DownloadPDF = () => { // Keep DownloadPDF for the PDFDownloadLink c
             fileName={`mydocument_${new Date().getTime()}.pdf`} // Example for unique filename
         >
         </PDFDownloadLink>
-    );
+    )
+}
+*/
+import React from 'react';
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import { useTextContext } from '../text-context'; // Adjust path as needed
+
+// Define styles for the PDF
+const styles = StyleSheet.create({
+  page: { flexDirection: 'column', padding: 20 },
+  section: { margin: 10, padding: 10, flexGrow: 1 },
+});
+
+// PDF Document Component
+export const MyDocument: React.FC = () => {
+  const { text } = useTextContext(); // Access text from context
+
+  return (
+    <Document>
+      <Page size="A4" style={styles.page}>
+        <View style={styles.section}>
+          <Text>Your own text: {text || 'No content provided.'}</Text>
+        </View>
+      </Page>
+    </Document>
+  );
 };
+

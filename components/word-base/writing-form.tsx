@@ -1,45 +1,30 @@
-import React, { useState } from 'react'
-//import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
-//import {StyleSheet, TextInput} from 'react-native';
-import './write.css'
-import { useTextContext } from "./text-context";
+import React from 'react';
+import './write.css';
+import { useTextContext } from '../header/text-context';
 
-const PLACEHOLDER_TEXT = "Write your document";
-export const WritingForm = () => {
-    //const [number, onChangeNumber] = React.useState('');
-    const [text, setText] = useState('');
+export const WritingForm: React.FC = () => {
+  const { text, setText } = useTextContext(); // Access text and setText from context
 
-    /*
-    const { text_, setText_ } = useTextContext();
+  const handleChangeInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setText(event.target.value); // Update the context value with the user's input
+  };
 
-    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      setText(e.target.value);
-    };
-    */
-
-    const handleChangeInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setText(event.target.value);
-    };
-
-    return (
-        <>
-            <div className='base-writing'>
-
-                <textarea
-                    className='input-writing'
-                    value={text}
-                    onChange={handleChangeInput}
-                    rows={10} // Adjust the rows for height
-                    cols={50} // Adjust the cols for width
-                    style={{
-                        width: '100%', // Optional to make it responsive
-                        padding: '10px',
-                        fontSize: '16px',
-                        height:'100%'
-                    }}
-                    placeholder={PLACEHOLDER_TEXT}
-                />
-            </div>
-        </>
-    )
-}
+  return (
+    <div className="base-writing">
+      <textarea
+        className="input-writing"
+        value={text}
+        onChange={handleChangeInput}
+        rows={10}
+        cols={50}
+        style={{
+          width: '100%',
+          padding: '10px',
+          fontSize: '16px',
+          height: '100%',
+        }}
+        placeholder="Write something" // Placeholder text
+      />
+    </div>
+  );
+};
