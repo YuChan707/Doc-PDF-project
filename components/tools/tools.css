@@ -4,6 +4,7 @@
     align-items: center;
     gap: 1px; 
     display: flex;
+    background-color: #2a3f44;
 }
 
 .text-tool{
@@ -17,3 +18,38 @@
     padding: 10px;
     gap: 10px;
 }
+
+.select-value:hover{
+  background-color: #ffb700;
+}
+/*
+.bold-button {
+    background-color: #ffcc00; 
+    color: black;
+    border: none;
+  }
+  
+  .bold-button:hover {
+    background-color: #ffb700; 
+  }
+  
+  .italic-button {
+    background-color: #0099ff; 
+    color: white;
+    border: none;
+  }
+  
+  .italic-button:hover {
+    background-color: #007acc; 
+  }
+  
+  .underline-button {
+    background-color: #ff0066; 
+    color: white;
+    border: none;
+  }
+  
+  .underline-button:hover {
+    background-color: #cc0052; 
+  }
+  */

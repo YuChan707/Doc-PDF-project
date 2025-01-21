@@ -1,11 +1,13 @@
 .logo-title{
     padding: 10px;
     align-items: right; 
+    color: #c4d7db;
 }
 .header{
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    background-color: #2a3f44;
 }
 .header-saving{
     text-align: left;
@@ -14,3 +16,8 @@
     gap: 10px; 
     margin: 10px; 
 }
+
+
+.options-save-as button:active {
+    background-color: #c4d7db ;
+ }

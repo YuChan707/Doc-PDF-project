@@ -20,3 +20,13 @@
     border-color: #007bff;
     outline: none;
 }
+
+.input-writing textarea::placeholder {
+    color: #ccc;
+}
+.base-writing textarea{
+    border-radius: 10px;
+}
+body{
+    background-color: #2a3f44;
+}
