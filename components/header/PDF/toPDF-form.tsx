@@ -19,7 +19,6 @@ export const MyPDF = ({ information }) => {
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
           <Text>{information || "No information provided"}</Text>
-          <Text>{"ok"}</Text>
         </View>
       </Page>
     </Document>
