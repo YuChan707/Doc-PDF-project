@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HeaderForm } from './header-form'
 
 export const AppHeader = () => {
+  const [information, setInformation] = useState('');
   return (
     <>
-      <HeaderForm />
+      <HeaderForm setInformation={setInformation} information={information}/>
     </>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './tools.css';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import './style'
+
 
 //nav bar
 import Container from 'react-bootstrap/Container';

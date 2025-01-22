@@ -1,22 +1,25 @@
 import React from 'react';
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import { useTextContext } from '../text-context'; // Ensure the path is correct for the context
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 
-// Define styles for the PDF
 const styles = StyleSheet.create({
-  page: { flexDirection: 'column', padding: 20 },
-  section: { margin: 10, padding: 10, flexGrow: 1 },
+  page: {
+    flexDirection: 'row',
+    backgroundColor: '#E4E4E4',
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1,
+  },
 });
 
-// PDF Document Component
-export const MyDocument: React.FC = () => {
-  const { text } = useTextContext(); // Access text from context
-
+export const MyPDF = ({ information }) => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
-          <Text>Your own text: {text || 'No content provided.'}</Text>
+          <Text>{information || "No information provided"}</Text>
+          <Text>{"ok"}</Text>
         </View>
       </Page>
     </Document>
